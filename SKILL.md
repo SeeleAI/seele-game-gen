@@ -9,10 +9,9 @@ Turn a user's game idea into a playable game by orchestrating Seele's generation
 
 ## Setup — do this before the first call
 
-The skill needs two environment variables. Check them before the first API call; if they're missing, ask the user to set them rather than guessing.
+The skill needs one environment variable. Check it before the first API call; if it's missing, ask the user to set it rather than guessing.
 
 - `SEELE_API_KEY` — the user's API key. Visit [https://code4agent-feature-games-openapi-web-merge.seele.chat/api](https://code4agent-feature-games-openapi-web-merge.seele.chat/api) and click the **"Get API Key"** button to create one. The key is shown only once at creation, so the user must copy it immediately. The key looks like `c4a_sk_...`.
-- `SEELE_BASE_URL` *(optional)* — override the default API base. Leave unset for the production default. The user's mentor or team may provide a feature-preview URL for testing.
 
 If `SEELE_API_KEY` is not set, the CLI returns a `MISSING_API_KEY` error — relay that to the user and ask them to export the key.
 
@@ -156,7 +155,7 @@ The CLI emits structured JSON errors on stdout (and logs to stderr). Every error
 | `SUBSCRIPTION_REQUIRED` | Seele01-pro without subscription | Retry with `--model Seele01-flash`. |
 | `GAME_ALREADY_PROCESSING` | `continue` called too early | Run `wait <game_id>` first, then retry. |
 | `UPSTREAM_INVALID_RESPONSE` / HTTP 502 | Backend hiccup | Wait a moment and retry once; then surface the error to the user. |
-| `NETWORK_ERROR` | Couldn't reach the host | Check `SEELE_BASE_URL` and the user's network. |
+| `NETWORK_ERROR` | Couldn't reach the host | Check the user's network connection. |
 
 For any error not listed here, relay the message to the user rather than guessing.
 
