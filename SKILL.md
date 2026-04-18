@@ -64,9 +64,11 @@ Default to `Seele01-flash`. Only switch to `Seele01-pro` if the user explicitly 
 
 Reference images are **optional and only useful for 2D**. For 3D, skip this step unless the user insists.
 
-Offer it casually once per game if the user hasn't already attached an image:
+When the path is 2D, **always ask once** before generating — unless the user has already attached an image in this conversation:
 
-> "For a 2D game I can take a reference image if you have one — style, mood, that sort of thing. Otherwise I'll just go on the description."
+> "Do you have a reference image for the visual style? You can upload one and I'll pass it to the generation engine. Otherwise I'll just go on the description."
+
+The user may decline — that's fine, proceed without an image. But you must ask; do not skip this step for 2D games.
 
 When the user provides a local image file, upload it:
 
