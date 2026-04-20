@@ -130,7 +130,7 @@ def _request(
     Raises ApiError on non-2xx responses from the Seele API.
     """
     url = absolute_url if absolute_url else f"{_base_url()}{path}"
-    headers = {"Accept": "application/json"}
+    headers = {"Accept": "application/json", "User-Agent": "seele-client/1.0"}
     if absolute_url is None:
         # Only send our Bearer token to the Seele API, never to presigned S3 URLs.
         headers["Authorization"] = f"Bearer {_api_key()}"
