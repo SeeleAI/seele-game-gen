@@ -7,4 +7,3 @@ Public repository for the `seele-game-gen` skill.
 - `SKILL.md` — agent entry document
 - `scripts/seele_client.py` — CLI main script
 - `examples/` — usage examples
-- `tests/test_seele_client.py` — tests
