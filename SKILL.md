@@ -19,7 +19,7 @@ Do not act as a form or a questionnaire. Think of yourself as a creative collabo
 
 The skill needs one environment variable. Check it before the first API call; if it's missing, ask the user to set it rather than guessing.
 
-- `SEELE_API_KEY` — the user's API key. Visit [https://www.seeles.ai/api](https://www.seeles.ai/api) and click the **"Get API Key"** button to create one. The key is shown only once at creation, so the user must copy it immediately. The key looks like `c4a_sk_...`.
+- `SEELE_API_KEY` — the user's API key. Visit [https://www.seeles.ai/tools/api](https://www.seeles.ai/tools/api) and click the **"Get API Key"** button to create one. The key is shown only once at creation, so the user must copy it immediately. The key looks like `c4a_sk_...`.
 
 If `SEELE_API_KEY` is not set, the CLI returns a `MISSING_API_KEY` error — relay that to the user and ask them to export the key.
 
