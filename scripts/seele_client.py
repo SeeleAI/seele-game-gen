@@ -105,7 +105,7 @@ def _api_key() -> str:
         fail(
             "MISSING_API_KEY",
             f"Set {ENV_API_KEY_PRIMARY} (or {ENV_API_KEY_FALLBACK}) to your Seele API key. "
-            "Get one at: https://www.seeles.ai/api "
+            "Get one at: https://www.seeles.ai/tools/api "
             '(click the "Get API Key" button).',
         )
     return key
